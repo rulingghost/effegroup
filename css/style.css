@@ -167,6 +167,14 @@ ul {
     letter-spacing: 2px;
 }
 
+.site-logo {
+    height: 65px;
+    width: auto;
+    object-fit: contain;
+    transition: var(--transition);
+    display: block;
+}
+
 .nav-links {
     display: flex;
     gap: 30px;
@@ -554,6 +562,14 @@ ul {
     font-size: 2rem;
     font-weight: 900;
     margin-bottom: 10px;
+}
+
+.footer-site-logo {
+    max-height: 120px;
+    width: auto;
+    margin: 0 auto 20px auto;
+    display: block;
+    object-fit: contain;
 }
 
 .footer-desc {
