@@ -166,10 +166,9 @@ ul {
 
 .logo {
     position: relative;
-    width: 250px;
-    height: 100%;
     display: flex;
-    align-items: center;
+    align-self: flex-start;
+    margin-top: -25px;
 }
 
 .logo-text {
@@ -179,16 +178,13 @@ ul {
 }
 
 .site-logo {
-    position: absolute;
-    top: -60px;
-    left: -110px;
-    height: 300px;
+    height: 210px;
     width: auto;
-    max-width: unset;
-    object-fit: contain;
+    display: block;
     transition: var(--transition);
     z-index: 1001;
-    pointer-events: none;
+    pointer-events: auto;
+    object-fit: contain;
 }
 .logo::after {
     content: '';
@@ -267,7 +263,9 @@ ul {
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 800px;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
     padding: 0 5%;
 }
 
@@ -287,6 +285,7 @@ ul {
     font-size: 4.5rem;
     margin-bottom: 20px;
     line-height: 1.1;
+    max-width: 800px;
 }
 
 .hero h1 span {
@@ -344,7 +343,7 @@ ul {
 .about-image {
     position: relative;
     border-radius: 20px;
-    overflow: hidden;
+    /* overflow: hidden; Removed to prevent the experience-badge from being cut off */
 }
 
 .about-image img {
@@ -588,9 +587,10 @@ ul {
 }
 
 .footer-site-logo {
-    max-height: 400px;
+    max-height: 160px;
     width: auto;
-    margin: 0 auto 20px auto;
+    max-width: 100%;
+    margin: 0 auto 30px auto;
     display: block;
     object-fit: contain;
 }
@@ -681,16 +681,6 @@ ul {
         padding: 0 5%;
     }
     
-    .site-logo {
-        height: 240px;
-        left: -60px;
-        top: -40px;
-    }
-    
-    .logo {
-        width: 200px;
-    }
-    
     .section-padding {
         padding: 60px 0;
     }
@@ -729,16 +719,6 @@ ul {
 @media (max-width: 768px) {
     .section-padding {
         padding: 40px 0;
-    }
-
-    .site-logo {
-        height: 180px;
-        left: -10px;
-        top: -30px;
-    }
-    
-    .logo {
-        width: 150px;
     }
 
     .nav-links {
@@ -832,16 +812,6 @@ ul {
 @media (max-width: 480px) {
     .section-padding {
         padding: 35px 0;
-    }
-
-    .site-logo {
-        height: 140px;
-        left: -4px;
-        top: -20px;
-    }
-    
-    .logo {
-        width: 120px;
     }
 
     .hero h1 {
